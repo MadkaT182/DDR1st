@@ -1,0 +1,294 @@
+local t = Def.ActorFrame {};
+
+t[#t+1] = Def.ActorFrame {
+	LoadActor("01")..{
+		OnCommand=cmd(diffusealpha,0;sleep,5.205;diffusealpha,1;zoom,1.6;x,SCREEN_CENTER_X-30;y,SCREEN_CENTER_Y-30;linear,.2;addx,-126;addy,-126;zoom,.65);
+	};
+	LoadActor("02")..{
+		OnCommand=cmd(diffusealpha,0;sleep,5.472;diffusealpha,1;zoom,1.6;x,SCREEN_CENTER_X+8;y,SCREEN_CENTER_Y-30;linear,.2;addx,-60;addy,-126;zoom,.65);
+	};
+	LoadActor("03")..{
+		OnCommand=cmd(diffusealpha,0;sleep,5.739;diffusealpha,1;zoom,1.6;x,SCREEN_CENTER_X+48;y,SCREEN_CENTER_Y-30;linear,.2;addx,4;addy,-126;zoom,.65);
+	};
+	LoadActor("04")..{
+		OnCommand=cmd(diffusealpha,0;sleep,6.006;diffusealpha,1;zoom,1.6;x,SCREEN_CENTER_X+88;y,SCREEN_CENTER_Y-30;linear,.2;addx,68;addy,-126;zoom,.65);
+	};
+	LoadActor("05")..{
+		OnCommand=cmd(diffusealpha,0;sleep,6.272;diffusealpha,1;zoom,1.6;x,SCREEN_CENTER_X-30;y,SCREEN_CENTER_Y+8;linear,.2;addx,-126;addy,-60;zoom,.65);
+	};
+	LoadActor("06")..{
+		OnCommand=cmd(diffusealpha,0;sleep,6.539;diffusealpha,1;zoom,1.6;x,SCREEN_CENTER_X+8;y,SCREEN_CENTER_Y+8;linear,.2;addx,-60;addy,-60;zoom,.65);
+	};
+	LoadActor("07")..{
+		OnCommand=cmd(diffusealpha,0;sleep,6.806;diffusealpha,1;zoom,1.6;x,SCREEN_CENTER_X+48;y,SCREEN_CENTER_Y+8;linear,.2;addx,4;addy,-60;zoom,.65);
+	};
+	LoadActor("08")..{
+		OnCommand=cmd(diffusealpha,0;sleep,7.073;diffusealpha,1;zoom,1.6;x,SCREEN_CENTER_X+88;y,SCREEN_CENTER_Y+8;linear,.2;addx,68;addy,-60;zoom,.65);
+	};
+	LoadActor("09")..{
+		OnCommand=cmd(diffusealpha,0;sleep,7.34;diffusealpha,1;zoom,1.6;x,SCREEN_CENTER_X-30;y,SCREEN_CENTER_Y+78;linear,.2;addx,-126;addy,-26;zoom,.65);
+	};
+	LoadActor("10")..{
+		OnCommand=cmd(diffusealpha,0;sleep,7.607;diffusealpha,1;zoom,1.6;x,SCREEN_CENTER_X+8;y,SCREEN_CENTER_Y+78;linear,.2;addx,-60;addy,-26;zoom,.65);
+	};
+	LoadActor("11")..{
+		OnCommand=cmd(diffusealpha,0;sleep,7.874;diffusealpha,1;zoom,1.6;x,SCREEN_CENTER_X+48;y,SCREEN_CENTER_Y+78;linear,.2;addx,4;addy,-26;zoom,.65);
+	};
+	LoadActor("12")..{
+		OnCommand=cmd(diffusealpha,0;sleep,8.141;diffusealpha,1;zoom,1.6;x,SCREEN_CENTER_X+88;y,SCREEN_CENTER_Y+78;linear,.2;addx,68;addy,-26;zoom,.65);
+	};
+	LoadActor("13")..{
+		OnCommand=cmd(diffusealpha,0;sleep,8.408;diffusealpha,1;zoom,1.6;x,SCREEN_CENTER_X-30;y,SCREEN_CENTER_Y+88;linear,.2;addx,-126;addy,68;zoom,.65);
+	};
+	LoadActor("14")..{
+		OnCommand=cmd(diffusealpha,0;sleep,8.675;diffusealpha,1;zoom,1.6;x,SCREEN_CENTER_X+8;y,SCREEN_CENTER_Y+88;linear,.2;addx,-60;addy,68;zoom,.65);
+	};
+	LoadActor("15")..{
+		OnCommand=cmd(diffusealpha,0;sleep,8.942;diffusealpha,1;zoom,1.6;x,SCREEN_CENTER_X+48;y,SCREEN_CENTER_Y+88;linear,.2;addx,4;addy,68;zoom,.65);
+	};
+	LoadActor("16")..{
+		OnCommand=cmd(diffusealpha,0;sleep,9.209;diffusealpha,1;zoom,1.6;x,SCREEN_CENTER_X+88;y,SCREEN_CENTER_Y+88;linear,.2;addx,68;addy,68;zoom,.65);
+	};
+};
+
+t[#t+1] = Def.ActorFrame {
+	OnCommand=cmd(Center;diffusealpha,0;sleep,5.171;diffusealpha,1;zoom,2;linear,0.034;zoom,1;sleep,0;diffusealpha,0);
+	LoadActor("01")..{
+		OnCommand=cmd(cropright,.5;cropbottom,.5;addx,-80;addy,-40);
+	};
+	LoadActor("01")..{
+		OnCommand=cmd(cropleft,.5;cropbottom,.5;addx,112;addy,-40);
+	};
+	LoadActor("01")..{
+		OnCommand=cmd(cropright,.5;croptop,.5;addx,-80;addy,72);
+	};
+	LoadActor("01")..{
+		OnCommand=cmd(cropleft,.5;croptop,.5;addx,112;addy,72);
+	};
+};
+t[#t+1] = Def.ActorFrame {
+	OnCommand=cmd(Center;diffusealpha,0;sleep,5.438;diffusealpha,1;zoom,2;linear,0.034;zoom,1;sleep,0;diffusealpha,0);
+	LoadActor("02")..{
+		OnCommand=cmd(cropright,.5;cropbottom,.5;addx,-80;addy,-40);
+	};
+	LoadActor("02")..{
+		OnCommand=cmd(cropleft,.5;cropbottom,.5;addx,112;addy,-40);
+	};
+	LoadActor("02")..{
+		OnCommand=cmd(cropright,.5;croptop,.5;addx,-80;addy,72);
+	};
+	LoadActor("02")..{
+		OnCommand=cmd(cropleft,.5;croptop,.5;addx,112;addy,72);
+	};
+};
+t[#t+1] = Def.ActorFrame {
+	OnCommand=cmd(Center;diffusealpha,0;sleep,5.705;diffusealpha,1;zoom,2;linear,0.034;zoom,1;sleep,0;diffusealpha,0);
+	LoadActor("03")..{
+		OnCommand=cmd(cropright,.5;cropbottom,.5;addx,-80;addy,-40);
+	};
+	LoadActor("03")..{
+		OnCommand=cmd(cropleft,.5;cropbottom,.5;addx,112;addy,-40);
+	};
+	LoadActor("03")..{
+		OnCommand=cmd(cropright,.5;croptop,.5;addx,-80;addy,72);
+	};
+	LoadActor("03")..{
+		OnCommand=cmd(cropleft,.5;croptop,.5;addx,112;addy,72);
+	};
+};
+t[#t+1] = Def.ActorFrame {
+	OnCommand=cmd(Center;diffusealpha,0;sleep,5.972;diffusealpha,1;zoom,2;linear,0.034;zoom,1;sleep,0;diffusealpha,0);
+	LoadActor("04")..{
+		OnCommand=cmd(cropright,.5;cropbottom,.5;addx,-80;addy,-40);
+	};
+	LoadActor("04")..{
+		OnCommand=cmd(cropleft,.5;cropbottom,.5;addx,112;addy,-40);
+	};
+	LoadActor("04")..{
+		OnCommand=cmd(cropright,.5;croptop,.5;addx,-80;addy,72);
+	};
+	LoadActor("04")..{
+		OnCommand=cmd(cropleft,.5;croptop,.5;addx,112;addy,72);
+	};
+};
+t[#t+1] = Def.ActorFrame {
+	OnCommand=cmd(Center;diffusealpha,0;sleep,6.239;diffusealpha,1;zoom,2;linear,0.034;zoom,1;sleep,0;diffusealpha,0);
+	LoadActor("05")..{
+		OnCommand=cmd(cropright,.5;cropbottom,.5;addx,-80;addy,-40);
+	};
+	LoadActor("05")..{
+		OnCommand=cmd(cropleft,.5;cropbottom,.5;addx,112;addy,-40);
+	};
+	LoadActor("05")..{
+		OnCommand=cmd(cropright,.5;croptop,.5;addx,-80;addy,72);
+	};
+	LoadActor("05")..{
+		OnCommand=cmd(cropleft,.5;croptop,.5;addx,112;addy,72);
+	};
+};
+t[#t+1] = Def.ActorFrame {
+	OnCommand=cmd(Center;diffusealpha,0;sleep,6.506;diffusealpha,1;zoom,2;linear,0.034;zoom,1;sleep,0;diffusealpha,0);
+	LoadActor("06")..{
+		OnCommand=cmd(cropright,.5;cropbottom,.5;addx,-80;addy,-40);
+	};
+	LoadActor("06")..{
+		OnCommand=cmd(cropleft,.5;cropbottom,.5;addx,112;addy,-40);
+	};
+	LoadActor("06")..{
+		OnCommand=cmd(cropright,.5;croptop,.5;addx,-80;addy,72);
+	};
+	LoadActor("06")..{
+		OnCommand=cmd(cropleft,.5;croptop,.5;addx,112;addy,72);
+	};
+};
+t[#t+1] = Def.ActorFrame {
+	OnCommand=cmd(Center;diffusealpha,0;sleep,6.773;diffusealpha,1;zoom,2;linear,0.034;zoom,1;sleep,0;diffusealpha,0);
+	LoadActor("07")..{
+		OnCommand=cmd(cropright,.5;cropbottom,.5;addx,-80;addy,-40);
+	};
+	LoadActor("07")..{
+		OnCommand=cmd(cropleft,.5;cropbottom,.5;addx,112;addy,-40);
+	};
+	LoadActor("07")..{
+		OnCommand=cmd(cropright,.5;croptop,.5;addx,-80;addy,72);
+	};
+	LoadActor("07")..{
+		OnCommand=cmd(cropleft,.5;croptop,.5;addx,112;addy,72);
+	};
+};
+t[#t+1] = Def.ActorFrame {
+	OnCommand=cmd(Center;diffusealpha,0;sleep,7.04;diffusealpha,1;zoom,2;linear,0.034;zoom,1;sleep,0;diffusealpha,0);
+	LoadActor("08")..{
+		OnCommand=cmd(cropright,.5;cropbottom,.5;addx,-80;addy,-40);
+	};
+	LoadActor("08")..{
+		OnCommand=cmd(cropleft,.5;cropbottom,.5;addx,112;addy,-40);
+	};
+	LoadActor("08")..{
+		OnCommand=cmd(cropright,.5;croptop,.5;addx,-80;addy,72);
+	};
+	LoadActor("08")..{
+		OnCommand=cmd(cropleft,.5;croptop,.5;addx,112;addy,72);
+	};
+};
+t[#t+1] = Def.ActorFrame {
+	OnCommand=cmd(Center;diffusealpha,0;sleep,7.307;diffusealpha,1;zoom,2;linear,0.034;zoom,1;sleep,0;diffusealpha,0);
+	LoadActor("09")..{
+		OnCommand=cmd(cropright,.5;cropbottom,.5;addx,-80;addy,-40);
+	};
+	LoadActor("09")..{
+		OnCommand=cmd(cropleft,.5;cropbottom,.5;addx,112;addy,-40);
+	};
+	LoadActor("09")..{
+		OnCommand=cmd(cropright,.5;croptop,.5;addx,-80;addy,72);
+	};
+	LoadActor("09")..{
+		OnCommand=cmd(cropleft,.5;croptop,.5;addx,112;addy,72);
+	};
+};
+t[#t+1] = Def.ActorFrame {
+	OnCommand=cmd(Center;diffusealpha,0;sleep,7.574;diffusealpha,1;zoom,2;linear,0.034;zoom,1;sleep,0;diffusealpha,0);
+	LoadActor("10")..{
+		OnCommand=cmd(cropright,.5;cropbottom,.5;addx,-80;addy,-40);
+	};
+	LoadActor("10")..{
+		OnCommand=cmd(cropleft,.5;cropbottom,.5;addx,112;addy,-40);
+	};
+	LoadActor("10")..{
+		OnCommand=cmd(cropright,.5;croptop,.5;addx,-80;addy,72);
+	};
+	LoadActor("10")..{
+		OnCommand=cmd(cropleft,.5;croptop,.5;addx,112;addy,72);
+	};
+};
+t[#t+1] = Def.ActorFrame {
+	OnCommand=cmd(Center;diffusealpha,0;sleep,7.841;diffusealpha,1;zoom,2;linear,0.034;zoom,1;sleep,0;diffusealpha,0);
+	LoadActor("11")..{
+		OnCommand=cmd(cropright,.5;cropbottom,.5;addx,-80;addy,-40);
+	};
+	LoadActor("11")..{
+		OnCommand=cmd(cropleft,.5;cropbottom,.5;addx,112;addy,-40);
+	};
+	LoadActor("11")..{
+		OnCommand=cmd(cropright,.5;croptop,.5;addx,-80;addy,72);
+	};
+	LoadActor("11")..{
+		OnCommand=cmd(cropleft,.5;croptop,.5;addx,112;addy,72);
+	};
+};
+t[#t+1] = Def.ActorFrame {
+	OnCommand=cmd(Center;diffusealpha,0;sleep,8.108;diffusealpha,1;zoom,2;linear,0.034;zoom,1;sleep,0;diffusealpha,0);
+	LoadActor("12")..{
+		OnCommand=cmd(cropright,.5;cropbottom,.5;addx,-80;addy,-40);
+	};
+	LoadActor("12")..{
+		OnCommand=cmd(cropleft,.5;cropbottom,.5;addx,112;addy,-40);
+	};
+	LoadActor("12")..{
+		OnCommand=cmd(cropright,.5;croptop,.5;addx,-80;addy,72);
+	};
+	LoadActor("12")..{
+		OnCommand=cmd(cropleft,.5;croptop,.5;addx,112;addy,72);
+	};
+};
+t[#t+1] = Def.ActorFrame {
+	OnCommand=cmd(Center;diffusealpha,0;sleep,8.375;diffusealpha,1;zoom,2;linear,0.034;zoom,1;sleep,0;diffusealpha,0);
+	LoadActor("13")..{
+		OnCommand=cmd(cropright,.5;cropbottom,.5;addx,-80;addy,-40);
+	};
+	LoadActor("13")..{
+		OnCommand=cmd(cropleft,.5;cropbottom,.5;addx,112;addy,-40);
+	};
+	LoadActor("13")..{
+		OnCommand=cmd(cropright,.5;croptop,.5;addx,-80;addy,72);
+	};
+	LoadActor("13")..{
+		OnCommand=cmd(cropleft,.5;croptop,.5;addx,112;addy,72);
+	};
+};
+t[#t+1] = Def.ActorFrame {
+	OnCommand=cmd(Center;diffusealpha,0;sleep,8.641;diffusealpha,1;zoom,2;linear,0.034;zoom,1;sleep,0;diffusealpha,0);
+	LoadActor("14")..{
+		OnCommand=cmd(cropright,.5;cropbottom,.5;addx,-80;addy,-40);
+	};
+	LoadActor("14")..{
+		OnCommand=cmd(cropleft,.5;cropbottom,.5;addx,112;addy,-40);
+	};
+	LoadActor("14")..{
+		OnCommand=cmd(cropright,.5;croptop,.5;addx,-80;addy,72);
+	};
+	LoadActor("14")..{
+		OnCommand=cmd(cropleft,.5;croptop,.5;addx,112;addy,72);
+	};
+};
+t[#t+1] = Def.ActorFrame {
+	OnCommand=cmd(Center;diffusealpha,0;sleep,8.908;diffusealpha,1;zoom,2;linear,0.034;zoom,1;sleep,0;diffusealpha,0);
+	LoadActor("15")..{
+		OnCommand=cmd(cropright,.5;cropbottom,.5;addx,-80;addy,-40);
+	};
+	LoadActor("15")..{
+		OnCommand=cmd(cropleft,.5;cropbottom,.5;addx,112;addy,-40);
+	};
+	LoadActor("15")..{
+		OnCommand=cmd(cropright,.5;croptop,.5;addx,-80;addy,72);
+	};
+	LoadActor("15")..{
+		OnCommand=cmd(cropleft,.5;croptop,.5;addx,112;addy,72);
+	};
+};
+t[#t+1] = Def.ActorFrame {
+	OnCommand=cmd(Center;diffusealpha,0;sleep,9.175;diffusealpha,1;zoom,2;linear,0.034;zoom,1;sleep,0;diffusealpha,0);
+	LoadActor("16")..{
+		OnCommand=cmd(cropright,.5;cropbottom,.5;addx,-80;addy,-40);
+	};
+	LoadActor("16")..{
+		OnCommand=cmd(cropleft,.5;cropbottom,.5;addx,112;addy,-40);
+	};
+	LoadActor("16")..{
+		OnCommand=cmd(cropright,.5;croptop,.5;addx,-80;addy,72);
+	};
+	LoadActor("16")..{
+		OnCommand=cmd(cropleft,.5;croptop,.5;addx,112;addy,72);
+	};
+};
+return t;
