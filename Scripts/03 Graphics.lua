@@ -1,338 +1,99 @@
 function GetThemeCD(songtit)
-local discimg = "fallback";
 
 --Verify CD from theme
-if songtit == "Boys" then
-	discimg = "01";
-end
-
-if songtit == "Butterfly" then
-	discimg = "02";
-end
-
-if songtit == "I Believe In Miracles (The Lisa Marie Experience Radio Edit)" then
-	discimg = "03";
-end
-
-if songtit == "Little Bitch" then
-	discimg = "04";
-end
-
-if songtit == "MAKE IT BETTER" then
-	discimg = "05";
-end
-
-if songtit == "PARANOiA" then
-	discimg = "06";
-end
-
-if songtit == "PARANOiA MAX～DIRTY MIX～" or songtit == "PARANOiA MAX~DIRTY MIX~ (in roulette)" then
-	discimg = "07";
-end
-
-if songtit == "PUT YOUR FAITH IN ME" then
-	discimg = "08";
-end
-
-if songtit == "AM-3P" then
-	discimg = "09";
-end
-
-if songtit == "stomp to my beat" then
-	discimg = "10";
-end
-
-if songtit == "TRIP MACHINE" then
-	discimg = "11";
-end
-
-if songtit == "EL RITMO TROPICAL" then
-	discimg = "12";
-end
-
-if songtit == "BRILLIANT 2U" then
-	discimg = "13";
-end
-
-if songtit == "BAD GIRLS" then
-	discimg = "14";
-end
-
-if songtit == "Boom Boom Dollar (Red Monster Mix)" then
-	discimg = "15";
-end
-
-if songtit == "DUB-I-DUB" then
-	discimg = "16";
-end
-
-if songtit == "SP-TRIP MACHINE~JUNGLE MIX~" then
-	discimg = "17";
-end
-
-if songtit == "Have You Never Been Mellow" then
-	discimg = "18";
-end
-
-if songtit == "KUNG FU FIGHTING" then
-	discimg = "19";
-end
-
-if songtit == "My Fire (UKS Remix)" then
-	discimg = "20";
-end
-
-if songtit == "LET'S GET DOWN" then
-	discimg = "21";
-end
-
-if songtit == "That's The Way (I Like It)" then
-	discimg = "22";
-end
-
-if songtit == "STRICTLY BUSINESS" then
-	discimg = "23";
-end
-
-if songtit == "PUT YOUR FAITH IN ME (Jazzy Groove)" then
-	discimg = "24";
-end
-
-if songtit == "BRILLIANT 2U(Orchestra Groove)" then
-	discimg = "25";
-end
-
-if songtit == "MAKE IT BETTER (So-REAL Mix)" then
-	discimg = "26";
-end
-
-if songtit == "HERO" then
-	discimg = "27";
-end
-
-if songtit == "GET UP'N MOVE" then
-	discimg = "28";
-end
-
-if songtit == "IF YOU WERE HERE" then
-	discimg = "29";
-end
-
-if songtit == "Smoke" then
-	discimg = "30";
-end
-
-if songtit == "TUBTHUMPING" then
-	discimg = "31";
-end
-
-if songtit == "LOVE" then
-	discimg = "32";
-end
-
-if songtit == "KEEP ON MOVIN'" then
-	discimg = "33";
-end
-
-if songtit == "LET THEM MOVE" then
-	discimg = "34";
-end
-
-if songtit == "20,NOVEMBER (D.D.R. version)" then
-	discimg = "35";
-end
-
-if songtit == "MAKE A JAM!" then
-	discimg = "36";
-end
-
-if songtit == "PARANOiA KCET ～clean mix～" then
-	discimg = "37";
-end
-
-if songtit == "XANADU" then
-	discimg = "38";
-end
-
-if songtit == "THE RACE" then
-	discimg = "39";
-end
-
-if songtit == "IN THE NAVY '99 (XXL Disaster Remix)" then
-	discimg = "40";
-end
-
-if songtit == "CAN'T TAKE MY EYES OFF YOU (70's REMIX)" or songtit == "CAN'T TAKE MY EYES OFF YOU" then
-	discimg = "41";
-end
-
-if songtit == "DO IT ALL NIGHT" then
-	discimg = "42";
-end
-
-if songtit == "FLASHDANCE (WHAT A FEELING)" then
-	discimg = "43";
-end
-
-if songtit == "GET UP AND DANCE" then
-	discimg = "44";
-end
-
-if songtit == "GET UP (BEFORE THE NIGHT IS OVER)" then
-	discimg = "45";
-end
-
-if songtit == "HOLIDAY" then
-	discimg = "46";
-end
-
-if songtit == "IF YOU CAN SAY GOODBYE" then
-	discimg = "47";
-end
-
-if songtit == "IT ONLY TAKES A MINUTE (Extended Remix)" then
-	discimg = "48";
-end
-
-if songtit == "MR. WONDERFUL" then
-	discimg = "49";
-end
-
-if songtit == "OH NICK PLEASE NOT SO QUICK" then
-	discimg = "50";
-end
-
-if songtit == "OPERATOR" then
-	discimg = "51";
-end
-
-if songtit == "ROCK BEAT" then
-	discimg = "52";
-end
-
-if songtit == "SO MANY MEN" then
-	discimg = "53";
-end
-
-if songtit == "TURN ME ON (HEAVENLY MIX)" then
-	discimg = "54";
-end
-
-if songtit == "UPSIDE DOWN" then
-	discimg = "55";
-end
-
-if songtit == "VOL.4" then
-	discimg = "56";
-end
-
-if songtit == "WONDERLAND (UKS MIX)" then
-	discimg = "57";
-end
-
-if songtit == "butterfly (UPSWING MIX)" then
-	discimg = "58";
-end
-
-if songtit == "CAPTAIN JACK (GRANDALE REMIX)" then
-	discimg = "59";
-end
-
-if songtit == "BOOM BOOM DOLLAR (K.O.G. G3 MIX)" then
-	discimg = "60";
-end
-
-if songtit == "AFRONOVA" then
-	discimg = "61";
-end
-
-if songtit == "END OF THE CENTURY" then
-	discimg = "62";
-end
-
-if songtit == "DAM DARIRAM" then
-	discimg = "63";
-end
-
-if songtit == "DYNAMITE RAVE" then
-	discimg = "64";
-end
-
-if songtit == "Silent Hill" then
-	discimg = "65";
-end
-
-if songtit == "DEAD END" then
-	discimg = "66";
-end
-
-if songtit == "La Señorita" then
-	discimg = "67";
-end
-
-if songtit == "LUV TO ME (AMD MIX)" then
-	discimg = "68";
-end
-
-if songtit == "Jam Jam Reggae" then
-	discimg = "69";
-end
-
-if songtit == "gentle stress (AMD SEXUAL MIX)" then
-	discimg = "70";
-end
-
-if songtit == "GRADIUSIC CYBER ～AMD G5 MIX～" then
-	discimg = "71";
-end
-
-if songtit == "PARANOiA Rebirth" then
-	discimg = "72";
-end
-
-if songtit == "FOLLOW THE SUN (90 IN THE SHADE MIX)" then
-	discimg = "73";
-end
-
---Konami missing fallback
-if songtit == "XsorryX" then
-	discimg = "74";
-end
-
---PSX Bonus
-if songtit == "BUMBLE BEE" then
-discimg = "75";
-end
-
-if songtit == "GIMME GIMME GIMME" then
-discimg = "76";
-end
-
---3rd Mix PLUS
-if songtit == "AFTER THE GAME OF LOVE" then
-discimg = "77";
-end
-
-if songtit == "CUTIE CHASER" then
-discimg = "78";
-end
-
-if songtit == "DROP THE BOMB" then
-discimg = "79";
-end
-
-if songtit == "LOVE THIS FEELIN'" then
-discimg = "80";
-end
-
-if songtit == "La Senorita Virtual" or songtit == "La Señorita Virtual" then
-discimg = "81";
-end
-
-if songtit == "think ya better D" then
-discimg = "82";
-end
-
-return discimg;
+local DiscImg = {
+	["Boys"] = "01",
+	["Butterfly"] = "02",
+	["I Believe In Miracles (The Lisa Marie Experience Radio Edit)"] = "03",
+	["Little Bitch"] = "04",
+	["MAKE IT BETTER"] = "05",
+	["PARANOiA"] = "06",
+	["PARANOiA MAX～DIRTY MIX～"] = "07",
+	["PARANOiA MAX~DIRTY MIX~ (in roulette)"] = "07",
+	["PUT YOUR FAITH IN ME"] = "08",
+	["AM-3P"] = "09",
+	["stomp to my beat"] = "10",
+	["TRIP MACHINE"] = "11",
+	["EL RITMO TROPICAL"] = "12",
+	["BRILLIANT 2U"] = "13",
+	["BAD GIRLS"] = "14",
+	["Boom Boom Dollar (Red Monster Mix)"] = "15",
+	["DUB-I-DUB"] = "16",
+	["SP-TRIP MACHINE~JUNGLE MIX~"] = "17",
+	["Have You Never Been Mellow"] = "18",
+	["KUNG FU FIGHTING"] = "19",
+	["My Fire (UKS Remix)"] = "20",
+	["LET'S GET DOWN"] = "21",
+	["That's The Way (I Like It)"] = "22",
+	["STRICTLY BUSINESS"] = "23",
+	["PUT YOUR FAITH IN ME (Jazzy Groove)"] = "24",
+	["BRILLIANT 2U(Orchestra Groove)"] = "25",
+	["MAKE IT BETTER (So-REAL Mix)"] = "26",
+	["HERO"] = "27",
+	["GET UP'N MOVE"] = "28",
+	["IF YOU WERE HERE"] = "29",
+	["Smoke"] = "30",
+	["TUBTHUMPING"] = "31",
+	["LOVE"] = "32",
+	["KEEP ON MOVIN'"] = "33",
+	["LET THEM MOVE"] = "34",
+	["20,NOVEMBER (D.D.R. version)"] = "35",
+	["MAKE A JAM!"] = "36",
+	["PARANOiA KCET ～clean mix～"] = "37",
+	["XANADU"] = "38",
+	["THE RACE"] = "39",
+	["IN THE NAVY '99 (XXL Disaster Remix)"] = "40",
+	["CAN'T TAKE MY EYES OFF YOU"] = "41",
+	["CAN'T TAKE MY EYES OFF YOU (70's REMIX)"] = "41",
+	["DO IT ALL NIGHT"] = "42",
+	["FLASHDANCE (WHAT A FEELING)"] = "43",
+	["GET UP AND DANCE"] = "44",
+	["GET UP (BEFORE THE NIGHT IS OVER)"] = "45",
+	["HOLIDAY"] = "46",
+	["IF YOU CAN SAY GOODBYE"] = "47",
+	["IT ONLY TAKES A MINUTE (Extended Remix)"] = "48",
+	["MR. WONDERFUL"] = "49",
+	["OH NICK PLEASE NOT SO QUICK"] = "50",
+	["OPERATOR"] = "51",
+	["ROCK BEAT"] = "52",
+	["SO MANY MEN"] = "53",
+	["TURN ME ON (HEAVENLY MIX)"] = "54",
+	["UPSIDE DOWN"] = "55",
+	["VOL.4"] = "56",
+	["WONDERLAND (UKS MIX)"] = "57",
+	["butterfly (UPSWING MIX)"] = "58",
+	["CAPTAIN JACK (GRANDALE REMIX)"] = "59",
+	["BOOM BOOM DOLLAR (K.O.G. G3 MIX)"] = "60",
+	["AFRONOVA"] = "61",
+	["END OF THE CENTURY"] = "62",
+	["DAM DARIRAM"] = "63",
+	["DYNAMITE RAVE"] = "64",
+	["Silent Hill"] = "65",
+	["DEAD END"] = "66",
+	["La Señorita"] = "67",
+	["LUV TO ME (AMD MIX)"] = "68",
+	["Jam Jam Reggae"] = "69",
+	["gentle stress (AMD SEXUAL MIX)"] = "70",
+	["GRADIUSIC CYBER ～AMD G5 MIX～"] = "71",
+	["PARANOiA Rebirth"] = "72",
+	["FOLLOW THE SUN (90 IN THE SHADE MIX)"] = "73",
+	--Konami missing fallback
+	["XsorryX"] = "74",
+	--PSX Bonus
+	["BUMBLE BEE"] = "75",
+	["GIMME GIMME GIMME"] = "76",
+	--3rd Mix PLUS
+	["AFTER THE GAME OF LOVE"] = "77",
+	["CUTIE CHASER"] = "78",
+	["DROP THE BOMB"] = "79",
+	["LOVE THIS FEELIN'"] = "80",
+	["La Senorita Virtual"] = "81",
+	["La Señorita Virtual"] = "81",
+	["think ya better D"] = "82"
+}
+
+local DiscNumber = DiscImg[songtit] or "fallback"
+
+return DiscNumber;
 
 end
