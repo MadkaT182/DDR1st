@@ -12,7 +12,7 @@ local t = Def.ActorFrame {
 		OnCommand=cmd(sleep,9.943;diffusealpha,0);
 	};
 	LoadActor("confetti")..{
-		OnCommand=cmd(FullScreen;blend,'BlendMode_Add';diffusealpha,0;sleep,16.049;diffusealpha,1;sleep,1.068;diffusealpha,0);
+		OnCommand=cmd(FullScreen;blend,'BlendMode_Add';diffusealpha,0;pause;sleep,16.049;play;diffusealpha,1;sleep,1.068;diffusealpha,0);
 	};
 };
 
