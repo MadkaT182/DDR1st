@@ -47,4 +47,10 @@ t[#t+1] = Def.ActorFrame {
 -- 	}
 -- };
 
+t[#t+1] = Def.ActorFrame {
+	LoadActor( "diff" )..{
+		OnCommand=cmd(x,SCREEN_CENTER_X;y,SCREEN_CENTER_Y+149);
+	}
+};
+
 return t
