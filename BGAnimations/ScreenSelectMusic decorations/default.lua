@@ -53,4 +53,10 @@ t[#t+1] = Def.ActorFrame {
 	}
 };
 
+t[#t+1] = Def.ActorFrame {
+	LoadActor( "title" )..{
+		OnCommand=cmd(x,SCREEN_CENTER_X+230;y,SCREEN_CENTER_Y+120);
+	}
+};
+
 return t

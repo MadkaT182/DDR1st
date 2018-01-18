@@ -97,3 +97,31 @@ local DiscNumber = DiscImg[songtit] or "fallback"
 return DiscNumber;
 
 end
+
+function GetDifficultyName(difficulty)
+	local Names = {
+		[1] = "SIMPLE",
+		[2] = "AVERAGE",
+		[3] = "NOVICE",
+		[4] = "EXPERT",
+		[5] = "PROFESSIONAL",
+		[6] = "GENUINE",
+		[7] = "HERO",
+		[999] = ""
+	}
+	local DiffName = Names[difficulty] or "HERO";
+	return DiffName;
+end
+
+function GetDifficultyColor(difficulty)
+	local Colors = {
+		["Difficulty_Beginner"] = "#00A2FF",
+		["Difficulty_Easy"] = "#FFEA00",
+		["Difficulty_Medium"] = "#FF0000",
+		["Difficulty_Hard"] = "#00500A",
+		["Difficulty_Challenge"] = "#4E00FF",
+		["Difficulty_Edit"] = "#FFFFFF",
+	}
+	local Color = Colors[difficulty] or "#FFFFFF";
+	return Color;
+end
