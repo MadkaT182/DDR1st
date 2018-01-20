@@ -139,9 +139,9 @@ if GAMESTATE:IsPlayerEnabled(PLAYER_2) then
 	};
 end
 
--- --Grade
--- t[#t+1] = LoadActor("grade")..{
--- 	OffCommand=cmd(sleep,0.2;linear,0.2;diffusealpha,0);
--- };
+--Grade
+t[#t+1] = LoadActor("grade")..{
+	OffCommand=cmd(sleep,0.2;linear,0.2;diffusealpha,0);
+};
 
 return t

@@ -41,12 +41,6 @@ t[#t+1] = Def.ActorFrame {
 	};
 };
 
--- t[#t+1] = Def.ActorFrame {
--- 	LoadActor( "../_playmode" )..{
--- 		OnCommand=cmd(x,SCREEN_CENTER_X;y,SCREEN_BOTTOM;draworder,1);
--- 	}
--- };
-
 t[#t+1] = Def.ActorFrame {
 	LoadActor( "diff" )..{
 		OnCommand=cmd(x,SCREEN_CENTER_X;y,SCREEN_CENTER_Y+149);
@@ -57,6 +51,27 @@ t[#t+1] = Def.ActorFrame {
 	LoadActor( "title" )..{
 		OnCommand=cmd(x,SCREEN_CENTER_X+230;y,SCREEN_CENTER_Y+120);
 	}
+};
+
+t[#t+1] = Def.ActorFrame {
+	LoadFont("_system1")..{
+		InitCommand=function(self)
+			if AnotherOn then
+				self:settext("ANOTHER");
+			elseif ManiacOn then
+				self:settext("MANIAC");
+			elseif DoubleOn then
+				self:settext("DOUBLE");
+			end
+		end;
+		OnCommand=cmd(x,SCREEN_CENTER_X-234;y,SCREEN_CENTER_Y+99);
+	};
+};
+
+t[#t+1] = Def.ActorFrame {
+	LoadFont("_system1")..{
+		OnCommand=cmd(x,SCREEN_CENTER_X-234;y,SCREEN_CENTER_Y+119);
+	};
 };
 
 return t

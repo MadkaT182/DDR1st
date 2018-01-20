@@ -16,20 +16,20 @@ if not GAMESTATE:IsDemonstration() then
 		}
 	};
 
-	t[#t+1] = Def.ActorFrame {
-		LoadFont("_system1")..{
-			Text="CHALLENGE EXTRA STAGE";
-			InitCommand=cmd(horizalign,center;x,SCREEN_CENTER_X;y,SCREEN_BOTTOM-133;visible,false);
-			StartTransitioningCommand=function(self)
-				if GAMESTATE:HasEarnedExtraStage() then
-					self:visible(true);
-					SCREENMAN:SystemMessage("Extra");
-				else
-					SCREENMAN:SystemMessage("Normal");
-				end;
-			end;
-		};
-	};
+	-- t[#t+1] = Def.ActorFrame {
+	-- 	LoadFont("_system1")..{
+	-- 		Text="CHALLENGE EXTRA STAGE";
+	-- 		InitCommand=cmd(horizalign,center;x,SCREEN_CENTER_X;y,SCREEN_BOTTOM-133;visible,false);
+	-- 		StartTransitioningCommand=function(self)
+	-- 			if GAMESTATE:HasEarnedExtraStage() then
+	-- 				self:visible(true);
+	-- 				SCREENMAN:SystemMessage("Extra");
+	-- 			else
+	-- 				SCREENMAN:SystemMessage("Normal");
+	-- 			end;
+	-- 		end;
+	-- 	};
+	-- };
 
 end
 

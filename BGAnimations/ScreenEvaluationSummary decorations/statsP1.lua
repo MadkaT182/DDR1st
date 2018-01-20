@@ -10,7 +10,7 @@ local Great = string.sub(Space..STATSMAN:GetAccumPlayedStageStats():GetPlayerSta
 local Good = string.sub(Space..STATSMAN:GetAccumPlayedStageStats():GetPlayerStageStats(PLAYER_1):GetTapNoteScores("TapNoteScore_W4"), -4);
 local Almost = string.sub(Space..STATSMAN:GetAccumPlayedStageStats():GetPlayerStageStats(PLAYER_1):GetTapNoteScores("TapNoteScore_W5"), -4);
 local Boo = string.sub(Space..STATSMAN:GetAccumPlayedStageStats():GetPlayerStageStats(PLAYER_1):GetTapNoteScores("TapNoteScore_Miss"), -4);
-local Mfix = 34;
+local Mfix = 28;
 
 local PMarv = Marvelous/FullStep;
 local PPerf = Perfect/FullStep;
@@ -22,14 +22,14 @@ local PBoo = Boo/FullStep;
 local MarvEnabled = PREFSMAN:GetPreference("AllowW1");--Everywhere
 if MarvEnabled == "AllowW1_Everywhere" then
 	--Marvelous--
-	t[#t+1] = LoadFont("_resultNum")..{
-		InitCommand=cmd(player,PLAYER_1;y,SCREEN_CENTER_Y-299;addx,-14;horizalign,right;);
+	t[#t+1] = LoadFont("ScoreDisplayNormal")..{
+		InitCommand=cmd(player,PLAYER_1;y,SCREEN_CENTER_Y-319;addx,-40;horizalign,right;);
 		OnCommand=function(self)
 			self:settextf(Marvelous);
 		end;
 	};
-	t[#t+1] = LoadFont("_system2")..{
-		InitCommand=cmd(player,PLAYER_1;y,SCREEN_CENTER_Y-299;addx,-112;horizalign,right;);
+	t[#t+1] = LoadFont("_system1")..{
+		InitCommand=cmd(player,PLAYER_1;y,SCREEN_CENTER_Y-319;addx,-148;horizalign,right;);
 		OnCommand=function(self)
 			self:settextf(string.format("%.1f", (Marvelous*100)/FullStep).."%%");
 		end;
@@ -39,113 +39,76 @@ else
 end;
 
 --Perfect--
-t[#t+1] = LoadFont("_resultNum")..{
-	InitCommand=cmd(player,PLAYER_1;y,SCREEN_CENTER_Y-303+Mfix;addx,-14;horizalign,right;);
+t[#t+1] = LoadFont("ScoreDisplayNormal")..{
+	InitCommand=cmd(player,PLAYER_1;y,SCREEN_CENTER_Y-319+Mfix;addx,-40;horizalign,right;);
 	OnCommand=function(self)
 		self:settextf(Perfect);
 	end;
 };
-t[#t+1] = LoadFont("_system2")..{
-	InitCommand=cmd(player,PLAYER_1;y,SCREEN_CENTER_Y-303+Mfix;addx,-112;horizalign,right;);
+t[#t+1] = LoadFont("_system1")..{
+	InitCommand=cmd(player,PLAYER_1;y,SCREEN_CENTER_Y-319+Mfix;addx,-148;horizalign,right;);
 	OnCommand=function(self)
 		self:settextf(string.format("%.1f", (Perfect*100)/FullStep).."%%");
 	end;
 };
 --Great--
-t[#t+1] = LoadFont("_resultNum")..{
-	InitCommand=cmd(player,PLAYER_1;y,SCREEN_CENTER_Y-273+Mfix;addx,-14;horizalign,right;);
+t[#t+1] = LoadFont("ScoreDisplayNormal")..{
+	InitCommand=cmd(player,PLAYER_1;y,SCREEN_CENTER_Y-291+Mfix;addx,-40;horizalign,right;);
 	OnCommand=function(self)
 		self:settextf(Great);
 	end;
 };
-t[#t+1] = LoadFont("_system2")..{
-	InitCommand=cmd(player,PLAYER_1;y,SCREEN_CENTER_Y-273+Mfix;addx,-112;horizalign,right;);
+t[#t+1] = LoadFont("_system1")..{
+	InitCommand=cmd(player,PLAYER_1;y,SCREEN_CENTER_Y-291+Mfix;addx,-148;horizalign,right;);
 	OnCommand=function(self)
 		self:settextf(string.format("%.1f", (Great*100)/FullStep).."%%");
 	end;
 };
 --Good--
-t[#t+1] = LoadFont("_resultNum")..{
-	InitCommand=cmd(player,PLAYER_1;y,SCREEN_CENTER_Y-243+Mfix;addx,-14;horizalign,right;);
+t[#t+1] = LoadFont("ScoreDisplayNormal")..{
+	InitCommand=cmd(player,PLAYER_1;y,SCREEN_CENTER_Y-263+Mfix;addx,-40;horizalign,right;);
 	OnCommand=function(self)
 		self:settextf(Good);
 	end;
 };
-t[#t+1] = LoadFont("_system2")..{
-	InitCommand=cmd(player,PLAYER_1;y,SCREEN_CENTER_Y-243+Mfix;addx,-112;horizalign,right;);
+t[#t+1] = LoadFont("_system1")..{
+	InitCommand=cmd(player,PLAYER_1;y,SCREEN_CENTER_Y-263+Mfix;addx,-148;horizalign,right;);
 	OnCommand=function(self)
 		self:settextf(string.format("%.1f", (Good*100)/FullStep).."%%");
 	end;
 };
 --Boo--
-t[#t+1] = LoadFont("_resultNum")..{
-	InitCommand=cmd(player,PLAYER_1;y,SCREEN_CENTER_Y-213+Mfix;addx,-14;horizalign,right;);
+t[#t+1] = LoadFont("ScoreDisplayNormal")..{
+	InitCommand=cmd(player,PLAYER_1;y,SCREEN_CENTER_Y-235+Mfix;addx,-40;horizalign,right;);
 	OnCommand=function(self)
 		self:settextf(Almost);
 	end;
 };
-t[#t+1] = LoadFont("_system2")..{
-	InitCommand=cmd(player,PLAYER_1;y,SCREEN_CENTER_Y-213+Mfix;addx,-112;horizalign,right;);
+t[#t+1] = LoadFont("_system1")..{
+	InitCommand=cmd(player,PLAYER_1;y,SCREEN_CENTER_Y-235+Mfix;addx,-148;horizalign,right;);
 	OnCommand=function(self)
 		self:settextf(string.format("%.1f", (Almost*100)/FullStep).."%%");
 	end;
 };
 --Miss--
-t[#t+1] = LoadFont("_resultNum")..{
-	InitCommand=cmd(player,PLAYER_1;y,SCREEN_CENTER_Y-183+Mfix;addx,-14;horizalign,right;);
+t[#t+1] = LoadFont("ScoreDisplayNormal")..{
+	InitCommand=cmd(player,PLAYER_1;y,SCREEN_CENTER_Y-207+Mfix;addx,-40;horizalign,right;);
 	OnCommand=function(self)
 		self:settextf(Boo);
 	end;
 };
-t[#t+1] = LoadFont("_system2")..{
-	InitCommand=cmd(player,PLAYER_1;y,SCREEN_CENTER_Y-183+Mfix;addx,-112;horizalign,right;);
+t[#t+1] = LoadFont("_system1")..{
+	InitCommand=cmd(player,PLAYER_1;y,SCREEN_CENTER_Y-207+Mfix;addx,-148;horizalign,right;);
 	OnCommand=function(self)
 		self:settextf(string.format("%.1f", (Boo*100)/FullStep).."%%");
 	end;
 };
 --Max Combo--
-t[#t+1] = LoadFont("_maintit")..{
-	InitCommand=cmd(player,PLAYER_1;y,SCREEN_CENTER_Y-144+Mfix;addx,-110;horizalign,left;);
+t[#t+1] = LoadFont("ScoreDisplayNormal")..{
+	InitCommand=cmd(player,PLAYER_1;y,SCREEN_CENTER_Y-175+Mfix;addx,-40;horizalign,right;);
 	OnCommand=function(self)
 		self:settextf(Combo);
 	end;
-};
---Bar indicators
---Miss
-t[#t+1] = Def.ActorFrame {
-	Def.Quad{
-		OnCommand=cmd(x,SCREEN_LEFT-224;addy,14;diffusecolor,color("#F04000");zoomto,16,200;cropbottom,1;draworder,1;linear,1;cropbottom,1-(PBoo+PAlmo+PGood+PGrea+PPerf+PMarv));
-	};
-};
---Boo
-t[#t+1] = Def.ActorFrame {
-	Def.Quad{
-		OnCommand=cmd(x,SCREEN_LEFT-224;addy,14;diffusecolor,color("#F800B0");zoomto,16,200;cropbottom,1;draworder,1;linear,1;cropbottom,1-(PAlmo+PGood+PGrea+PPerf+PMarv));
-	};
-};
---Good
-t[#t+1] = Def.ActorFrame {
-	Def.Quad{
-		OnCommand=cmd(x,SCREEN_LEFT-224;addy,14;diffusecolor,color("#10E0F0");zoomto,16,200;cropbottom,1;draworder,1;linear,1;cropbottom,1-(PGood+PGrea+PPerf+PMarv));
-	};
-};
---Great
-t[#t+1] = Def.ActorFrame {
-	Def.Quad{
-		OnCommand=cmd(x,SCREEN_LEFT-224;addy,14;diffusecolor,color("#00F860");zoomto,16,200;cropbottom,1;draworder,1;linear,1;cropbottom,1-(PGrea+PPerf+PMarv));
-	};
-};
---Perfect
-t[#t+1] = Def.ActorFrame {
-	Def.Quad{
-		OnCommand=cmd(x,SCREEN_LEFT-224;addy,14;diffusecolor,color("#F8F840");zoomto,16,200;cropbottom,1;draworder,1;linear,1;cropbottom,1-(PPerf+PMarv));
-	};
-};
---Marvelous
-t[#t+1] = Def.ActorFrame {
-	Def.Quad{
-		OnCommand=cmd(x,SCREEN_LEFT-224;addy,14;diffusecolor,Color.White;zoomto,16,200;cropbottom,1;draworder,1;linear,1;cropbottom,1-(PMarv));
-	};
 };
 
 return t;

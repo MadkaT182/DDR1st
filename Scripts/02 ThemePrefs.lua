@@ -4,45 +4,21 @@ end
 
 local Prefs =
 {
-	BOOT =
+	EnableCodes =
 	{
 		Default = false,
 		Choices = { OptionNameString('Off'), OptionNameString('On') },
 		Values = { false, true }
 	},
-	SONGOPT =
-	{
-		Default = 'No',
-		Choices = { OptionNameString('No'), OptionNameString('DDR'), OptionNameString('PRO') },
-		Values = { 'No', 'DDR', 'PRO' }
-	},
-	COMBOU =
+	SongOpt = 
 	{
 		Default = false,
 		Choices = { OptionNameString('Off'), OptionNameString('On') },
-		Values = { false, true }
-	},
-	HDEFNS =
-	{
-		Default = false,
-		Choices = { OptionNameString('No'), OptionNameString('Yes') },
 		Values = { false, true }
 	},
 }
 
 ThemePrefs.InitAll(Prefs)
-
--- function InitUserPrefs()
-
--- 	for k, v in pairs(Prefs) do
-
--- 		local GetPref = type(v) == "boolean" and GetUserPrefB or GetUserPref
--- 		if GetPref(k) == nil then
--- 			SetUserPref(k, v)
--- 		end
--- 	end
-
--- end
 
 function OptionRowDummySound()
 	return {

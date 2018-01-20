@@ -1,4 +1,5 @@
 local path = "../ScreenSelectMusic background/";
+InitVars();
 return Def.ActorFrame {
 	LoadActor( "bg" )..{
 		OnCommand=cmd(FullScreen);

@@ -3,7 +3,13 @@ local difficulty;
 
 t[#t+1] = Def.ActorFrame {
 	LoadFont("_diff_meter")..{
-		InitCommand=cmd(y,-29;playcommand,"Update");
+		InitCommand=function(self)
+			self:y(-29);
+			self:playcommand("Update");
+			if MirrorOn then
+				self:zoomy(-1);
+			end
+		end;
 		UpdateCommand=function(self)
 			for player in ivalues(GAMESTATE:GetHumanPlayers()) do
 				local song = GAMESTATE:GetCurrentSong();

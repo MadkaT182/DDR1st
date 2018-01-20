@@ -17,8 +17,8 @@ t[#t+1] = Def.ActorFrame {
 	};
 	LoadActor("_mode/hard")..{
 		OnCommand=cmd(y,-20);
-		GainFocusCommand=cmd(stoptweening;linear,.25;zoom,1);
-		LoseFocusCommand=cmd(stoptweening;linear,.25;zoom,.619);
+		GainFocusCommand=cmd(stoptweening;linear,.25;zoom,1;diffuseshift;effectcolor1,.19,.64,.88,1;effectcolor2,.94,.89,.38,1);
+		LoseFocusCommand=cmd(stoptweening;linear,.25;zoom,.619;stopeffect;diffuse,1,1,1,1);
 	};
 
 	LoadFont("_stages")..{
@@ -51,6 +51,19 @@ t[#t+1] = Def.ActorFrame {
 		OnCommand=cmd(y,163;x,-199);
 		GainFocusCommand=cmd(diffusealpha,1);
 		LoseFocusCommand=cmd(diffusealpha,0);
+	};
+	LoadFont("_system1")..{
+		OnCommand=cmd(y,25);
+		GainFocusCommand=cmd(diffusealpha,1);
+		LoseFocusCommand=cmd(diffusealpha,0);	
+		CodeMessageCommand = function(self, params)
+			self:settext(string.upper(params.Name));
+		end;
+	};
+	Def.Quad{
+		GainFocusCommand=function(self)
+			GMode="hard";
+		end
 	};
 };
 

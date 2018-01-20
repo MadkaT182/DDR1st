@@ -18,8 +18,8 @@ t[#t+1] = Def.ActorFrame {
 --Sound
 t[#t+1] = Def.ActorFrame {
 	LoadActor("close")..{
-		StartTransitioningCommand=cmd(sleep,delay;queuecommand,"play");
-		PlayCommand=cmd(play);
+		StartTransitioningCommand=cmd(sleep,delay;queuecommand,"Snd");
+		SndCommand=cmd(play);
 	};
 };
 
