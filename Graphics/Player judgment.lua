@@ -73,7 +73,6 @@ local function CreateJudgment(pad)
 			if not AnyTrackThisPad(param.Notes) then return end
 
 			local JudgmentCommand = JudgeCmds[param.TapNoteScore]
-
 			self:visible(true):setstate(frame)
 			JudgmentCommand(self)
 		end,
