@@ -58,20 +58,22 @@ local function CreateJudgment(pad)
 	local XOffset = PadXOffset[pad] or 0
 	local name = pad and "JudgmentPad"..tostring(pad) or "Judgment"
 	return Def.Sprite{
-		Name="Judgment",
+		Name=name,
 		Texture=THEME:GetPathG("Judgment", "Normal"),
 		InitCommand=function(s) s:pause():visible(false):x(XOffset) end,
 		OnCommand=THEME:GetMetric("Judgment","JudgmentOnCommand"),
 		ResetCommand=function(s) s:finishtweening():stopeffect():visible(false) end,
 		JudgmentMessageCommand=function(self, param)
 			if param.Player ~= player or param.HoldNoteScore then return end
-			if not AnyTrackThisPad(param.Notes) then return end
 
 			local frame = TNSFrames[param.TapNoteScore]
 			if not frame then return end
-			local JudgmentCommand = JudgeCmds[param.TapNoteScore]
 
-			self:playcommand("Reset"):visible(true):setstate(frame)
+			self:playcommand("Reset") --we must reset regardless of pad.
+			if not AnyTrackThisPad(param.Notes) then return end
+
+			local JudgmentCommand = JudgeCmds[param.TapNoteScore]
+			self:visible(true):setstate(frame)
 			JudgmentCommand(self)
 		end,
 	}
