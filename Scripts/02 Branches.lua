@@ -21,16 +21,13 @@ function DDRCredits()
 		return SelectMusicOrCourse();
 	end
 
-	--SSS
-	if STATSMAN:GetBestFinalGrade() == 'Grade_Tier01' then
-		return "ScreenEndingBest";
-	end;
-	--SS
-	if STATSMAN:GetBestFinalGrade() == 'Grade_Tier02' then
-		return "ScreenEndingNormal";
+	--Easy mode thanks screen
+	if GMode == "easy" then
+		return "ScreenThanksEasy";
 	else
 		return "ScreenGameOver";
-	end;
+	end
+
 end
 
 -- used for various SMOnline-enabled screens:
