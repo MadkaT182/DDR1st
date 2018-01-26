@@ -25,7 +25,7 @@ function DDRCredits()
 	if GMode == "easy" then
 		return "ScreenThanksEasy";
 	else
-		return "ScreenGameOver";
+		return "ScreenThanksNormal";
 	end
 
 end
