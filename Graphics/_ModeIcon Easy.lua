@@ -46,13 +46,10 @@ t[#t+1] = Def.ActorFrame {
 		GainFocusCommand=cmd(diffusealpha,1);
 		LoseFocusCommand=cmd(diffusealpha,0);
 	};
-	LoadFont("_system1")..{
+	LoadActor(THEME:GetPathG("","Mod_Indicator"))..{
 		OnCommand=cmd(y,25);
 		GainFocusCommand=cmd(diffusealpha,1);
-		LoseFocusCommand=cmd(diffusealpha,0);	
-		CodeMessageCommand = function(self, params)
-			self:settext(string.upper(params.Name));
-		end;
+		LoseFocusCommand=cmd(diffusealpha,0);
 	};
 	Def.Quad{
 		GainFocusCommand=function(self)

@@ -54,17 +54,8 @@ t[#t+1] = Def.ActorFrame {
 };
 
 t[#t+1] = Def.ActorFrame {
-	LoadFont("_system1")..{
-		InitCommand=function(self)
-			if AnotherOn then
-				self:settext("ANOTHER");
-			elseif ManiacOn then
-				self:settext("MANIAC");
-			elseif DoubleOn then
-				self:settext("DOUBLE");
-			end
-		end;
-		OnCommand=cmd(x,SCREEN_CENTER_X-234;y,SCREEN_CENTER_Y+99);
+	LoadActor(THEME:GetPathG("","Mod_Indicator"))..{
+		OnCommand=cmd(x,SCREEN_CENTER_X-234;y,SCREEN_CENTER_Y+115);
 	};
 };
 

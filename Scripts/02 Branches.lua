@@ -15,19 +15,23 @@ function WarnScreen()
 	end;
 end;
 
--- Show the special endings
+-- Show the endings
 function DDRCredits()
 	if GAMESTATE:IsEventMode() then
 		return SelectMusicOrCourse();
 	end
-
-	--Easy mode thanks screen
-	if GMode == "easy" then
-		return "ScreenThanksEasy";
+	if STATSMAN:GetCurStageStats():AllFailed() then
+		return "ScreenGameOver";
 	else
-		return "ScreenThanksNormal";
+		if GMode == "easy" then
+			return "ScreenThanksEasy";
+		else
+			if GotExtra then
+				return "ScreenSpecialEnd";
+			end
+			return "ScreenThanksNormal";
+		end
 	end
-
 end
 
 -- used for various SMOnline-enabled screens:

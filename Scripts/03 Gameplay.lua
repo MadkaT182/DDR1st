@@ -35,8 +35,6 @@ function SetCodeAnother()
 	end
 	AnotherOn=true;
 	ManiacOn=false;
-	DoubleOn=false;
-	MirrorOn=false;
 end
 
 function SetCodeManiac()
@@ -45,8 +43,6 @@ function SetCodeManiac()
 	end
 	ManiacOn=true;
 	AnotherOn=false;
-	DoubleOn=false;
-	MirrorOn=false;
 end
 
 function SetCodeDouble()
@@ -54,18 +50,12 @@ function SetCodeDouble()
 		GAMESTATE:SetCurrentStyle('Double');
 	end
 	DoubleOn=true;
-	AnotherOn=false;
-	ManiacOn=false;
-	MirrorOn=false;
 end
 
 function SetCodeMirror()
 	for pn in ivalues(GAMESTATE:GetHumanPlayers()) do
 		GAMESTATE:GetPlayerState(pn):GetPlayerOptions('ModsLevel_Preferred'):Mirror(true);
 	end
-	AnotherOn=false;
-	ManiacOn=false;
-	DoubleOn=false;
 	MirrorOn=true;
 end
 
@@ -76,4 +66,5 @@ function InitVars()
 	ManiacOn=false;
 	DoubleOn=false;
 	MirrorOn=false;
+	GotExtra=false;
 end
