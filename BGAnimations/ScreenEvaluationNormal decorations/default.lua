@@ -1,4 +1,5 @@
 local t = Def.ActorFrame {};
+local song = GAMESTATE:GetCurrentSong();
 local MarvEnabled = PREFSMAN:GetPreference("AllowW1");
 local Mfix = 28;
 
@@ -143,5 +144,27 @@ end
 t[#t+1] = LoadActor("grade")..{
 	OffCommand=cmd(sleep,0.2;linear,0.2;diffusealpha,0);
 };
+
+if ThemePrefs.Get("DataEval") then
+	t[#t+1] = LoadFont("_system1")..{
+		InitCommand=function(self)
+			self:settext(song:GetDisplayMainTitle());
+			self:x(SCREEN_CENTER_X);
+			self:y(SCREEN_TOP+12);
+			self:diffuse(color("#FFFF00DD"));
+		end;
+	};
+	for player in ivalues(GAMESTATE:GetHumanPlayers()) do
+		t[#t+1] = LoadFont("_system1")..{
+			InitCommand=function(self)
+				local diff = GAMESTATE:GetCurrentSteps(player):GetDifficulty();
+				self:settext("-"..CustomDifficultyToLocalizedString(diff).."-");
+				self:x(player == PLAYER_1 and SCREEN_CENTER_X-231 or SCREEN_CENTER_X+231);
+				self:y(SCREEN_TOP+50);
+				self:diffuse(color("#FFFF00DD"));
+			end;
+		};
+	end
+end
 
 return t

@@ -10,7 +10,19 @@ local Prefs =
 		Choices = { OptionNameString('Off'), OptionNameString('On') },
 		Values = { false, true }
 	},
-	SongOpt = 
+	SongOpt =
+	{
+		Default = false,
+		Choices = { OptionNameString('Off'), OptionNameString('On') },
+		Values = { false, true }
+	},
+	DataEval =
+	{
+		Default = false,
+		Choices = { OptionNameString('Off'), OptionNameString('On') },
+		Values = { false, true }
+	},
+	XtraReq =
 	{
 		Default = false,
 		Choices = { OptionNameString('Off'), OptionNameString('On') },

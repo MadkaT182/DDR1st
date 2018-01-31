@@ -2,6 +2,10 @@ local t = Def.ActorFrame {};
 
 if not GAMESTATE:IsDemonstration() then
 
+	if PREFSMAN:GetPreference("SongsPerPlay") < GAMESTATE:GetCurrentStageIndex()+1 then
+		PlayedExtra = true;
+	end;
+
 	t[#t+1] = Def.Quad{
 		OnCommand=cmd(FullScreen;diffusecolor,color("#000000");diffusealpha,.5);
 	};

@@ -16,20 +16,35 @@ if not GAMESTATE:IsDemonstration() then
 		}
 	};
 
-	-- t[#t+1] = Def.ActorFrame {
-	-- 	LoadFont("_system1")..{
-	-- 		Text="CHALLENGE EXTRA STAGE";
-	-- 		InitCommand=cmd(horizalign,center;x,SCREEN_CENTER_X;y,SCREEN_BOTTOM-133;visible,false);
-	-- 		StartTransitioningCommand=function(self)
-	-- 			if GAMESTATE:HasEarnedExtraStage() then
-	-- 				self:visible(true);
-	-- 				SCREENMAN:SystemMessage("Extra");
-	-- 			else
-	-- 				SCREENMAN:SystemMessage("Normal");
-	-- 			end;
-	-- 		end;
-	-- 	};
-	-- };
+	for _, s in ipairs(Stage) do
+		if PREFSMAN:GetPreference("SongsPerPlay") == GAMESTATE:GetCurrentStageIndex()+1 and GMode ~= "easy" then
+			t[#t+1] = Def.ActorFrame {
+				LoadFont("_system1")..{
+					StartTransitioningCommand=function(self)
+						self:x(SCREEN_CENTER_X);
+						self:y(SCREEN_BOTTOM-133);
+						for player in ivalues(GAMESTATE:GetHumanPlayers()) do
+							local life = STATSMAN:GetCurStageStats():GetPlayerStageStats(player):GetCurrentLife();
+							local percent = STATSMAN:GetCurStageStats():GetPlayerStageStats(player):GetPercentDancePoints();
+							if ThemePrefs.Get("XtraReq") then
+								if life == 1 and percent > .95 then
+									self:settext("CHALLENGE EXTRA STAGE");
+									GotExtra = true;
+								end;
+							else
+								if life == 1 then
+									self:settext("CHALLENGE EXTRA STAGE");
+									GotExtra = true;
+								end;
+							end;
+						end;
+					end;
+				};
+			};
+		elseif PREFSMAN:GetPreference("SongsPerPlay") < GAMESTATE:GetCurrentStageIndex()+1 then
+			PlayedExtra = true;
+		end;
+	end
 
 end
 

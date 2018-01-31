@@ -67,4 +67,5 @@ function InitVars()
 	DoubleOn=false;
 	MirrorOn=false;
 	GotExtra=false;
+	PlayedExtra=false;
 end

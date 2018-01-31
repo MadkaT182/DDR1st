@@ -167,7 +167,6 @@ Branch = {
 			if not GAMESTATE:IsCourseMode() then
 				return "ScreenEvaluationSummary"
 			else
-				--return GameOverOrContinue()
 				return DDRCredits()
 			end
 		else
@@ -255,6 +254,17 @@ Branch = {
 			local allFailed = STATSMAN:GetCurStageStats():AllFailed()
 			local song = GAMESTATE:GetCurrentSong()
 
+			if GotExtra and not PlayedExtra then
+				for player in ivalues(GAMESTATE:GetHumanPlayers()) do
+					GAMESTATE:AddStageToPlayer(player);
+					GAMESTATE:ResetPlayerOptions(player);
+					GAMESTATE:GetPlayerState(player):GetPlayerOptions('ModsLevel_Preferred'):LifeSetting('LifeType_Battery');
+					GAMESTATE:GetPlayerState(player):GetPlayerOptions('ModsLevel_Preferred'):BatteryLives(1);
+					GAMESTATE:GetPlayerState(player):GetPlayerOptions('ModsLevel_Preferred'):FailSetting('FailType_Immediate');
+				end
+				return "ScreenSelectMusic";
+			end
+
 			if GAMESTATE:IsEventMode() or stagesLeft >= 1 then
 				return "ScreenProfileSave"
 			elseif song:IsLong() and maxStages <= 2 and stagesLeft < 1 and allFailed then
@@ -277,10 +287,7 @@ Branch = {
 		return IsNetConnected() and "ScreenTitleMenu" or "ScreenTitleMenu"
 	end,
  	AfterSaveSummary = function()
-		--return GameOverOrContinue()
 		return DDRCredits()
---		[[ Enable when Finished ]]
--- 		return GAMESTATE:AnyPlayerHasRankingFeats() and "ScreenNameEntryTraditional" or "ScreenGameOver"
 	end,
 	AfterContinue = function()
 		if GAMESTATE:GetNumPlayersEnabled() == 0 then
