@@ -1,5 +1,5 @@
 return Def.ActorFrame {
 	LoadActor( "../doorbg" )..{
-		OnCommand=cmd(FullScreen);
+		OnCommand=cmd(diffuse,color(GetDoorColor());FullScreen);
 	};
 }

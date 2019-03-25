@@ -7,13 +7,6 @@ for pn in ivalues(GAMESTATE:GetEnabledPlayers()) do
 			Name="LifeMeter Frame";
 			InitCommand=cmd(y,SCREEN_TOP+28;valign,0);
 			OnCommand=function(self) if pn == PLAYER_1 then self:x(SCREEN_CENTER_X-175):zoomx(1) else self:x(SCREEN_CENTER_X+172):zoomx(-1) end end;
-			-- LifeChangedMessageCommand=function(self,params)
-			-- 	if (params.Player == pn) then
-			-- 		local life = string.format("%.1f",params.LifeMeter:GetLife() * 10)
-			-- 		local pills = (string.format("%.1f",life * 17.25 / 42)) * 10
-			-- 		if pills == 41 then self:glowshift():effectperiod(0.1):effectcolor1(1,1,1,0.4):effectcolor2(1,1,1,0) else self:stopeffect() end
-			-- 	end;
-			-- end;
 		};
 	};
 end;
@@ -32,9 +25,6 @@ for pn in ivalues(GAMESTATE:GetEnabledPlayers()) do
 		t[#t+1] = Def.Sprite{
 			BeginCommand=cmd(y,SCREEN_TOP+48;);
 			InitCommand=function(self) if pn == PLAYER_1 then self:x(SCREEN_CENTER_X-305+6*i) else self:x(SCREEN_CENTER_X+304-6*i) end end;
-			-- OnCommand=function(self)
-			-- 	self:sleep(i / 20)
-			-- end;
 			AnimCommand=function(self)
 				self:sleep(0.6)
 				self:accelerate(0.075)

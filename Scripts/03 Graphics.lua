@@ -125,3 +125,13 @@ function GetDifficultyColor(difficulty)
 	local Color = Colors[difficulty] or "#FFFFFF";
 	return Color;
 end
+
+function GetDoorColor()
+	if AnotherOn then
+		return "#F0CB63";
+	elseif ManiacOn then
+		return "#FE6B6B";
+	else
+		return "#FFFFFF"
+	end
+end

@@ -1,3 +1,3 @@
 return Def.ActorFrame {
-	LoadActor("_doorclose");
+	LoadActor("_doorclose/defcolor");
 };

@@ -7,7 +7,7 @@ if not GAMESTATE:IsDemonstration() then
 	};
 
 	t[#t+1] = Def.ActorFrame {
-		LoadActor( "../_doorclose/delay" )..{};
+		LoadActor( "../_doorclose/delcolor" )..{};
 	};
 
 	t[#t+1] = Def.ActorFrame {

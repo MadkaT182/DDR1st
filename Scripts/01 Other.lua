@@ -43,3 +43,13 @@ function thified_curstage_index(on_eval)
 		end
 	end
 end
+
+function get_stage_index()
+	if GAMESTATE:GetCurrentStage() == "Stage_Final" then
+		return "FINAL STAGE";
+	elseif GAMESTATE:IsExtraStage() or GAMESTATE:IsExtraStage2() then
+		return "EXTRA STAGE";
+	else
+		return "STAGE "..GAMESTATE:GetCurrentStageIndex() + 1;
+	end
+end

@@ -10,7 +10,7 @@ t[#t+1] = Def.ActorFrame {
 	LoadActor("load2")..{
 		OnCommand=cmd(diffusealpha,0;Center;sleep,8.508;diffusealpha,1;sleep,2.036;diffusealpha,0);
 	};
-	LoadActor("lbl_load")..{
+	LoadActor(THEME:GetPathG("","loading"))..{
 		OnCommand=cmd(diffusealpha,0;Center;addy,171;sleep,10.644;linear,1.068;diffusealpha,1;);
 	};
 };
