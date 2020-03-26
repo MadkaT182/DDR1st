@@ -15,10 +15,16 @@ end;
 t[#t+1] = Def.ActorFrame{
 	InitCommand=cmd(addx,48;addy,48);
 	Def.Quad{
-		InitCommand=cmd(FullScreen;rainbow;effectperiod,10;blend,"BlendMode_Modulate");
+		InitCommand=cmd(FullScreen;rainbow;effectperiod,20;blend,"BlendMode_Modulate");
 	};
 	LoadActor("separator")..{
 		InitCommand=cmd(Center);
+	};
+	LoadActor("hint")..{
+		InitCommand=cmd(x,SCREEN_RIGHT-152;y,SCREEN_BOTTOM-48);
+	};
+	LoadActor("title")..{
+		InitCommand=cmd(x,SCREEN_CENTER_X;y,48);
 	};
 };
 
