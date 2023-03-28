@@ -1,6 +1,6 @@
 return Def.ActorFrame {
 	Def.Quad{
-		InitCommand=cmd(FullScreen;diffusecolor,color("#FFFFFF"));
+		OnCommand=cmd(FullScreen;diffusecolor,color("#FFFFFF"));
 	};
 	LoadActor( "../logobg" )..{
 		OnCommand=cmd(Center);

@@ -1,13 +1,5 @@
-local t = Def.ActorFrame {};
-
-if GAMESTATE:GetCoinMode() == 'CoinMode_Home' then
-	t[#t+1] = Def.ActorFrame {
-		LoadActor("logocs")..{};
+return Def.ActorFrame {
+	Def.ActorFrame {
+		LoadActor( GAMESTATE:GetCoinMode() == 'CoinMode_Home' and "logocs" or "logoac");
 	};
-else
-	t[#t+1] = Def.ActorFrame {
-		LoadActor("logoac")..{};
-	};
-end
-
-return t;
+};
